@@ -89,3 +89,48 @@ console.log("5を3で割った余りは" + (bigNum % smallNum) + "です。");
 // Q10スコープ
 
 // 関数がスコープになっていて「function foo」の関数に参照されていない。
+
+
+// Q1標準組み込みオブジェクト
+let round = Math.round(7.85);
+console.log('round => ', round);
+
+// Q2コールバック関数
+var alertmsg = function(){
+  alert("Hello Word!")
+}
+setTimeout(alertmsg,3000);
+    // setTimeout(関数,ミリ秒);
+
+// Q3if
+let num = '10';
+
+if(num > 0){
+  console.log('num is greater than 0');
+}else if(num < 0){
+  console.log('num is less than 0');
+}else if(num === 0){
+  console.log('num is 0');
+}
+
+// Q4for
+let numbers = [];
+
+for(let i = 0;i < 101;i++){
+  numbers.push(i);
+  console.log(i);
+}
+
+// Q5for×if
+let mixed = [4, '2', 5, '8', '9', 0, 1];
+
+if(mixed != "number"){
+  console.log('not number');
+}
+for(let i=0;i<7;i++){
+if(mixed[i] % 2 === 0){
+  console.log('even');
+}else if(mixed[i] % 2 != 0){
+  console.log('odd');
+}
+}
