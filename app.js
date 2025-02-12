@@ -47,10 +47,10 @@ let averages = [playerList[0].age + playerList[1].age + playerList[2].age];
 console.log(averages / 3);
 
 // Q6関数
-function sayHALLO() {
+function sayHello() {
   console.log("HELLO");
 }
-sayHALLO();
+sayHello();
 let sayWorld = "World";
 console.log(sayWorld);
 
@@ -123,14 +123,15 @@ for(let i = 0;i < 101;i++){
 
 // Q5for×if
 let mixed = [4, '2', 5, '8', '9', 0, 1];
+// 文字列string('')か数値numberか
 
-if(mixed != "number"){
-  console.log('not number');
-}
 for(let i=0;i<7;i++){
-if(mixed[i] % 2 === 0){
+  if(typeof mixed[i] !== 'number'){
+    console.log('not number');
+  }else if(mixed[i] % 2 === 0){
   console.log('even');
-}else if(mixed[i] % 2 != 0){
+}else if(mixed[i] % 2 === 1){
   console.log('odd');
 }
 }
+// 文字列や数値などの複数の種類を判別するときは「typeof」で条件を付ける。
